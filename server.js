@@ -29,7 +29,7 @@ MongoClient.connect('mongodb://localhost/trackDB', (err, database) => {
     console.log('MongoDB Connection Error. Please make sure that MongoDB is running.');
     process.exit(1);
   }
-  db = database;
+  db = database.db('testdatabase');
 });
 
 /**
